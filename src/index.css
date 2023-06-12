@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* COLOR AND ANIMATION */
+  body{
+    background-color: rgb(228, 228, 228)
+  }
+  .gradient_color_one {
+    @apply bg-gradient-to-r from-sky-300 to-blue-400;
+  }
+
+  .gradient_color_two {
+    @apply bg-gradient-to-r from-sky-500 to-blue-500;
+  }
+
+  .gradient_color_three {
+    @apply bg-sky-100;
+  }
+
+  .transition_one {
+    @apply transition ease-in-out delay-[50ms];
+  }
+
+  .btn {
+    @apply border rounded-md w-[10.5rem] h-[2.5rem] font-semibold;
+  }
+
+  /* LEFT BAR GROUP */
+  .left_bar_icon {
+    @apply h-10 w-10 text-2xl items-center flex justify-center p-2 rounded-md ml-3 transition_one;
+  }
+
+  .left_bar_text {
+    @apply font-semibold group-hover:text-slate-900;
+  }
+
+  .left_bar_icon_active {
+    @apply h-10 w-10 text-2xl items-center flex justify-center p-2 rounded-md ml-3 text-white  gradient_color_two shadow-md transition_one;
+  }
+
+  .left_bar_text_active {
+    @apply font-semibold text-slate-900;
+  }
+
+  .left_bar_nav_div {
+    @apply cursor-pointer select-none hover:gradient_color_three py-2 transition_one;
+  }
+
+  .left_bar_nav_div_active {
+    @apply cursor-pointer select-none gradient_color_one py-2 transition_one;
+  }
+
+  /* NavBar Group */
+  .navbar_icon {
+    @apply h-8 w-8 p-1 absolute mx-1 cursor-pointer;
+  }
+  .image_container {
+    @apply w-12 h-12 cursor-pointer;
+  }
+  .navbar_input {
+    @apply h-full w-full mx-8 px-2 bg-slate-200 outline-none font-semibold;
+  }
+  /* Home Group */
+  .table_item {
+    @apply p-1 px-2 font-semibold;
+  }
+
+  /* Log In Out Group */
+  .sign_btn {
+    @apply px-8 py-2 border rounded-md text-[#E0EAFC] font-semibold hover:bg-[#E0EAFC] hover:text-[#00B4DB] transition_one;
+  }
+}
