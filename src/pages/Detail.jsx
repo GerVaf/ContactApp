@@ -25,7 +25,7 @@ const Detail = () => {
 
   const navigate = useNavigate();
   return (
-    <div className="p-2 border flex flex-col md:flex-row">
+    <div className="p-2 bg-white rounded-lg border flex flex-col md:flex-row">
       <BiArrowBack
         onClick={() => navigate("../")}
         className="w-8 h-8 p-1 cursor-pointer"
@@ -43,7 +43,7 @@ const Detail = () => {
             <h1 className="text-2xl font-semibold">{user?.name}</h1>
           </div>
           {/* Right Icon */}
-          <div className="flex items-end gap-3 p-4">
+          <div className="flex  items-center gap-3 p-4">
             <AiOutlineHeart
               onClick={() => {
                 dispatch(insertFavContact(user));

@@ -50,32 +50,32 @@ const Edit = () => {
     }
   };
   return (
-    <div className="p-2 border w-full h-full flex items-center justify-center">
+    <div className="p-2 h-[85vh] bg-white rounded-lg border w-full  flex items-center justify-center">
       <Box miw={300}>
         {/* <h1 className="p-3 text-2xl mb-3  ">Create Contact</h1> */}
         <form
           className="flex flex-col gap-4 px-3"
           onSubmit={form.onSubmit(handleEdit)}
         >
-          <TextInput
+          <TextInput size={'lg'}
             withAsterisk
             label="Name"
             placeholder="your name"
             {...form.getInputProps("name")}
           />
-          <TextInput
+          <TextInput size={'lg'}
             withAsterisk
             label="Phone"
             placeholder="your phone number"
             {...form.getInputProps("phone")}
           />
-          <TextInput
+          <TextInput size={'lg'}
             withAsterisk
             label="Email"
             placeholder="your email"
             {...form.getInputProps("email")}
           />
-          <TextInput
+          <TextInput size={'lg'}
             withAsterisk
             label="Address"
             placeholder="your address "
