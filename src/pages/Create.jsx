@@ -107,7 +107,7 @@ const Create = () => {
                   ) : (
                     <button
                       type="submit"
-                      className="btn border-sky-900 text-sky-900 hover:bg-[#44BE9E] hover:text-white transition_one"
+                      className="btn border-[#45BD9E] text-[#45BD9E] hover:bg-[#44BE9E] hover:text-white transition_one"
                     >
                       Create
                     </button>

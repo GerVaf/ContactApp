@@ -84,7 +84,7 @@ const Login = () => {
               ) : (
                 <button
                   type="submit"
-                  className="btn border-sky-900 text-sky-900 hover:bg-sky-900 hover:text-white transition_one"
+                  className="btn border-[#45BD9E] text-[#45BD9E] hover:bg-[#45BD9E] hover:text-white transition_one"
                 >
                   Log In
                 </button>
@@ -94,7 +94,7 @@ const Login = () => {
         </Box>
       </div>
       {/*  */}
-      <div className="bg-gradient-to-r from-[#00B4DB] to-[#0083B0]  flex flex-col items-center justify-center gap-5">
+      <div className="bg-gradient-to-r from-[#45BD9E] to-[#45BD9E]  flex flex-col items-center justify-center gap-5">
         <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#E0EAFC] to-[#CFDEF3] ">
           New Here
         </h1>
