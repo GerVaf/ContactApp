@@ -39,7 +39,7 @@ const ContactTable = ({contacts}) => {
   // const { contacts } = useSelector((state) => state.contactSlice);
   return (
     <table class="table-auto w-full select-none ">
-      <thead className="text-left bg-sky-500">
+      <thead className="text-left bg-[#44BE9E]">
         <tr>
           <th></th>
           <th className="table_item text-white">Name</th>

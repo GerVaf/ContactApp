@@ -11,7 +11,7 @@ import Create from "./pages/Create";
 import RouteGuard from "./components/RouteGuard";
 import Edit from "./pages/Edit";
 import Favourite from "./pages/Favourite";
-
+import './index.css';
 function App() {
   return (
     <Routes>

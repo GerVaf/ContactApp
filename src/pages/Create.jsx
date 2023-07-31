@@ -6,6 +6,8 @@ import { useCreateContactMutation } from "../rtk/services/api";
 import { useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import BtnLoading from "../components/BtnLoading";
+import "../components/createform.css";
+import createimage from "../images/create.gif";
 
 const Create = () => {
   const navigate = useNavigate();
@@ -40,63 +42,91 @@ const Create = () => {
     }
   };
   return (
-    <div className="p-2 rounded-lg bg-white h-[85vh] border flex items-center justify-center">
-      <Box miw={300}>
-        {/* <h1 className="p-3 text-2xl mb-3  ">Create Contact</h1> */}
-        <form
-          className="flex flex-col gap-4 px-3"
-          onSubmit={form.onSubmit(handleCreate)}
-        >
-          <TextInput
-            withAsterisk
-            size='lg'
-            label="Name"
-            placeholder="your name"
-            {...form.getInputProps("name")}
-          />
-          <TextInput
-            withAsterisk
-            size='lg'
-            label="Phone"
-            placeholder="your phone number"
-            {...form.getInputProps("phone")}
-          />
-          <TextInput
-            withAsterisk
-            size='lg'
-            label="Email"
-            placeholder="your email"
-            {...form.getInputProps("email")}
-          />
-          <TextInput
-            withAsterisk
-            size='lg'
-            label="Address"
-            placeholder="your address "
-            {...form.getInputProps("address")}
-          />
-
-          <Group position="center" mt="md">
-            {isLoading ? (
-              <BtnLoading text={"Create"} />
-            ) : (
-              <button
-                type="submit"
-                className="btn border-sky-900 text-sky-900 hover:bg-sky-900 hover:text-white transition_one"
+    <div class="container w-[100%] h-[100%] bg-white">
+      <div class="form-container">
+        <div class="sigin-form active-form">
+          < div className="p-2 sm:ml-[160px]  rounded-lg bg-white h-[85vh] sm:w-[100%] w-[100%] border flex mt-20 justify-around">
+          <div className=""><img src={createimage} className="h-[60%] mt-24 " /></div>
+            <div className="sm:mr-32"><Box miw={300}>
+              {/* <h1 className="p-3 text-2xl mb-3  ">Create Contact</h1> */}
+              <form
+                className="flex flex-col gap-4 px-3"
+                onSubmit={form.onSubmit(handleCreate)}
               >
-                Create
-              </button>
-            )}
+                {/* name */}
+                <div className="input-form">
+                  <input
+                    type="text"
+                    name="pseudo"
+                    id="pseudo"
+                    required
+                    placeholder=" "
+                    {...form.getInputProps("name")}
+                  />
+                  <label htmlFor="pseudo">Name</label>
+                </div>
+                {/* email */}
+                <div className="input-form">
+                  <input
+                    type="text"
+                    name="pseudo"
+                    id="pseudo"
+                    required
+                    placeholder=" "
+                    {...form.getInputProps("phone")}
+                  />
+                  <label htmlFor="pseudo">Phone</label>
+                </div>
+                {/* email */}
+                <div className="input-form">
+                  <input
+                    type="text"
+                    name="pseudo"
+                    id="pseudo"
+                    required
+                    placeholder=" "
+                    {...form.getInputProps("email")}
+                  />
+                  <label htmlFor="pseudo">Email</label>
+                </div>
+                {/* Address */}
+                <div className="input-form">
+                  <input
+                    type="text"
+                    name="pseudo"
+                    id="pseudo"
+                    required
+                    placeholder=" "
+                    {...form.getInputProps("address")}
+                  />
+                  <label htmlFor="pseudo">Address</label>
+                </div>
+                <Group position="center" mt="md">
+                  {isLoading ? (
+                    <BtnLoading text={"Create"} />
+                  ) : (
+                    <button
+                      type="submit"
+                      className="btn border-sky-900 text-sky-900 hover:bg-[#44BE9E] hover:text-white transition_one"
+                    >
+                      Create
+                    </button>
+                  )}
 
-            <button
-              onClick={() => navigate("../")}
-              className="btn border-red-900 text-red-900 hover:bg-red-900 hover:text-white transition_one"
-            >
-              Cancel
-            </button>
-          </Group>
-        </form>
-      </Box>
+                  <button
+                    onClick={() => navigate("../")}
+                    className="btn border-red-900 text-red-900 hover:bg-red-900 hover:text-white transition_one"
+                  >
+                    Cancel
+                  </button>
+                </Group>
+              </form>
+            </Box>
+          
+            </div>
+            </div>
+        </div>
+      </div>
     </div>
   );
 };

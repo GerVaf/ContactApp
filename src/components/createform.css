@@ -1,0 +1,60 @@
+:root {
+    --white: #e9e9e9;
+    --gray: #333;
+    --blue: #44BE9E;
+    --lightblue: #008997;
+  }
+  
+
+  
+  .container .form-container .sigin-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    animation: hide 1.25s ease-in-out forwards;
+  }
+  .container .form-container .active-form {
+    display: block;
+    animation: show 1.25s ease-in-out;
+  }
+  
+  
+  .container .form-container input {
+    background: none;
+    border: 1px solid var(--gray);
+    height: 40px;
+    border-radius: 15px;
+    margin: 20px 0;
+    
+    padding-left: 20px;
+    color: #44BE9E;
+    width: 100%;
+  }
+  /*  */
+  .container .form-container input:focus + label,
+  .container .form-container input:not(:placeholder-shown) + label {
+    transform: translate(0%, -160%);
+    color: var(--blue);
+  }
+  /*  */
+  
+  
+  
+  
+  /*  */
+  .container .form-container .input-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  /*  */
+  /*  */
+  .container .form-container .input-form label {
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    cursor: text;
+  }
+  /*  */

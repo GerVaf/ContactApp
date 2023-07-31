@@ -6,7 +6,8 @@ import { useEditContactMutation } from "../rtk/services/api";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import BtnLoading from "../components/BtnLoading";
-
+import "../components/createform.css";
+import updateimage from "../images/update.gif";
 const Edit = () => {
   const navigate = useNavigate();
   const { id } = useParams();
@@ -50,7 +51,12 @@ const Edit = () => {
     }
   };
   return (
-    <div className="p-2 h-[85vh] bg-white rounded-lg border w-full  flex items-center justify-center">
+<div class="container">
+      <div class="form-container">
+        <div class="sigin-form active-form">
+        <div className="p-2 sm:ml-[160px] mt-44 sm:mt-28  rounded-lg bg-white h-[85%] sm:h-[90vh] sm:w-[100%] w-[100%] border flex mt-20 justify-around">
+        <div className=""><img src={updateimage} className="h-[60%] mt-24 " /></div>
+<div className="sm:mr-20  ">
       <Box miw={300}>
         {/* <h1 className="p-3 text-2xl mb-3  ">Create Contact</h1> */}
         <form
@@ -88,7 +94,7 @@ const Edit = () => {
             ) : (
               <button
                 type="submit"
-                className="btn border-sky-900 text-sky-900 hover:bg-sky-900 hover:text-white transition_one"
+                className="btn border-sky-900 text-sky-900 hover:bg-[#44BE9E] hover:text-white transition_one"
               >
                 Confirm
               </button>
@@ -104,7 +110,9 @@ const Edit = () => {
           </Group>
         </form>
       </Box>
+      </div>
     </div>
+    </div> </div> </div>
   );
 };
 

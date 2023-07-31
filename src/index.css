@@ -72,3 +72,16 @@
     @apply px-8 py-2 border rounded-md text-[#E0EAFC] font-semibold hover:bg-[#E0EAFC] hover:text-[#00B4DB] transition_one;
   }
 }
+
+/* App.css */
+body {
+  font-family: 'Roboto', sans-serif; /* Use Roboto font for the entire app */
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif; /* Use Roboto font for heading elements */
+}
+
+p {
+  font-family: 'Roboto', sans-serif; /* Use Roboto font for paragraph elements */
+}
