@@ -16,8 +16,8 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const form = useForm({
     initialValues: {
-      email: "",
-      password: "",
+      email: "admin@gmail.com",
+      password: "admin123",
     },
 
     validate: {
